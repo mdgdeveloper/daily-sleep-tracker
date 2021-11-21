@@ -4,6 +4,8 @@
 # Description
 This application provides a trend analysis of the sleep evolution of the user by using a CRUD API. The technology for the frontend solution is ReactJS while for the backend tasks, Express together with MongoDB are the technologies selected. 
 
+Based on the idea from [Daily Sleep Tracker in Code Mentor](https://www.codementor.io/projects/web/daily-sleep-tracker-web-app-byi4kpk5rt)
+
 # Data Structures
 ```js
 {
@@ -47,3 +49,35 @@ This application provides a trend analysis of the sleep evolution of the user by
 4. Frontend design and deployment
 - [ ] Full design definition
 - [ ] Component-based design description 
+
+# Version Roadmap
+## 0.1-pre
+### Milestones
+* Stanmdards definition
+* Objects definitions
+* Local infrastructure deployment
+* Docker pre-design 
+
+## 0.2-pre
+* Backend initial local deployment
+* Backend functional design and test 
+
+## 0.3-pre 
+* Frontend initial local deployment
+* Design phase
+* Design definitions: Color palette, WebApp structure, Responsive design 
+
+## 0.4-pre
+* Frontend Graph implementation
+* Frontend Dashboard implementation
+
+## 0.5-pre
+* Interaction test 
+* Workflow analysis 
+* Login/Logout design and implementation in backend. 
+
+## ✅ 1.0 First Stable Version 
+* Full deployment
+  * Backend deployment with dockers and git 
+  * Frontend deployment in mdgmedia.es servers 
+
