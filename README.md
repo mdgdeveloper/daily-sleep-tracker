@@ -5,7 +5,7 @@
 This application provides a trend analysis of the sleep evolution of the user by using a CRUD API. The technology for the frontend solution is ReactJS while for the backend tasks, Express together with MongoDB are the technologies selected. 
 
 # Data Structures
-```json
+```js
 {
     id: ID,
     date: date,
