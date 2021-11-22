@@ -7,13 +7,36 @@ This application provides a trend analysis of the sleep evolution of the user by
 Based on the idea from [Daily Sleep Tracker in Code Mentor](https://www.codementor.io/projects/web/daily-sleep-tracker-web-app-byi4kpk5rt)
 
 # Data Structures
+## Entries
+### GoToBedEntry
+
 ```js
 {
     id: ID,
     date: date,
-    startTime: time,
-    endTime: time, 
-    wakeUpStatus: number,
+    type: gotobed,
+    time: date,
+}
+```
+### WakeUp entry
+```js
+{
+  id: ID,
+  goToBedID: ID, // Obtained as last-id. 
+  date: date,
+  type: wakeup,
+  time: date,
+  wakeUpRating: number
+}
+```
+
+### Sleep Entry
+```js
+{
+  id: ID,
+  sleepTime: number, // Minutes
+  wakeUpRating: number,
+  dayRating: number
 }
 ```
 
@@ -22,9 +45,36 @@ Based on the idea from [Daily Sleep Tracker in Code Mentor](https://www.codement
 1. New Entry
 2. Date is automatically obtained from current time, however, the user is able modify it. 
 3. Start Time
-4. End Time 
-5. Wake Up Status 
-6. Send
+  * The app stores current time, and leaves the messages of expecting Wake Up Time for the date
+  * Until the user does not provides that information, that entry is not closed. 
+4. Send
+
+## User Entry closure
+1. Close Entry
+2. End Time 
+3. Wake Up Status
+4. New Sleep Entry 
+5. Send
+
+## User Sleep Entry Rating 
+1. Once the Sleep Entry is created, add as pending to review.
+2. The user can evaluate the day for the next 24 hours. 
+3. Remove the notification. 
+
+### Method List
+1. getLastWeek(date)
+2. getLastMonth(date)
+3. setStartTime(date)
+4. setEndTime(date, rating)
+
+
+## Divide the Insertion in Two Steps
+* Before sleeping.
+  * Should be something easy: 2 clicks at most. 
+* After Waking Up
+
+## Provide information about the performance perception of the day
+* Before sleeping. 
 
 ## User Analysis
 1. Direct access
