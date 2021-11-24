@@ -8,6 +8,11 @@ sleepRouter.get("/", (req, res) => {
   res.send(result);
 });
 
+sleepRouter.get("/bedEntries", (req, res) =>{
+  const result = sleepLib.getBedEntries();
+  res.send(result);
+})
+
 sleepRouter.get("/lastWeek", (req, res) => {
   res.send("/api/sleep/lastWeek");
 });

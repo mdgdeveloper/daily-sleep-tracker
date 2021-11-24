@@ -9,13 +9,14 @@ Based on the idea from [Daily Sleep Tracker in Code Mentor](https://www.codement
 # Data Structures
 ## Entries
 ### GoToBedEntry
+Definition of `goToBedEntry` 
 
 ```js
 {
     id: ID,
     date: date,
     type: gotobed,
-    time: date,
+    status: open/closed
 }
 ```
 ### WakeUp entry
@@ -34,6 +35,8 @@ Based on the idea from [Daily Sleep Tracker in Code Mentor](https://www.codement
 ```js
 {
   id: ID,
+  startDate: date,
+  endDate: date,
   sleepTime: number, // Minutes
   wakeUpRating: number,
   dayRating: number
