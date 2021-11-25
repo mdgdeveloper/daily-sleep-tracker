@@ -1,0 +1,2 @@
+DELETE http://localhost:5000/api/sleep/delete/619f9c9acc94920db32da435
+content-type: application/json

@@ -1,0 +1,11 @@
+PUT http://localhost:5000/api/sleep/update/619f973640495260a26a3562
+content-type: application/json
+
+{
+    "startDate": "2021-11-23T23:00:18.389Z",
+    "endDate": "2021-11-24T07:04:18.389Z",
+    "sleepRating": 3,
+    "dayRating": 4,
+    "completed": true
+}
+
