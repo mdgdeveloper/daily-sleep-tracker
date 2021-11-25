@@ -1,7 +1,10 @@
 const express = require("express");
+require('dotenv').config()
 const app = require("./app");
-const port = 5000;
 
-app.listen(port, () => {
-  console.log(`Server working at ${port}`);
+const Sleep = require('./models/sleepEntry');
+
+
+app.listen(process.env.PORT, () => {
+  console.log(`Server working at ${process.env.PORT}`);
 });
