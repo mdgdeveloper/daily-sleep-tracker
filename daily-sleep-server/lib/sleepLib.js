@@ -61,6 +61,24 @@ const newEntry = async (body) => {
   }
 };
 
+const sortByDate = async () => {
+  try{
+    const response = await Sleep.find({}).sort({endDate: -1});
+    return response[0];
+  }catch(error){
+    throw new Error(error.message);
+  }
+}
+
+const sortByDateWeek = async () => {
+  try{
+    const response = await Sleep.find({}).sort({endDate: -1});
+    return response.slice(0,7);
+  }catch(error){
+    throw new Error(error.message);
+  }
+}
+
 module.exports = {
   getAllEntries,
   deleteEntry,
@@ -68,5 +86,7 @@ module.exports = {
   getLastEntryPending,
   getCompleted,
   updateEntry,
-  newEntry
+  newEntry,
+  sortByDate,
+  sortByDateWeek
 };

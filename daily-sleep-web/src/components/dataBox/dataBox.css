@@ -1,0 +1,60 @@
+.box-main{
+    width: 25%;
+    border-radius: 20px;
+    padding: 15px;
+
+}
+
+.red{
+    background-color: var(--main-red);
+}
+
+.blue{
+    background-color: var(--main-blue);
+}
+
+.green{
+    background-color: var(--main-green);
+}
+
+
+.box-header{
+    display: flex;
+}
+
+.box-header-icon{
+    background-color: black;
+    padding: 5px;
+    border-radius: 10px;
+    height: 25px;
+    width: 25px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-content{
+    margin-top: 15px;
+    font-size: 20px;
+
+}
+
+.box-info{
+    display: flex;
+    margin-top: 5px;
+    justify-content: flex-start;
+    align-items: start;
+
+}
+
+.box-info-data{
+font-size: 55px;
+font-weight: 500;
+}
+
+.box-info-units{
+    text-transform: uppercase;
+    font-weight: 400;
+    padding-top: 8px;
+}

@@ -1,0 +1,15 @@
+.chart-main{
+    width: 100%;
+    height: 300px;
+}
+
+.chart-legend{
+    margin-top: 10px;
+    padding-top: 10px;
+    background-color: red;
+}
+
+
+.recharts-legend-wrapper{
+    margin-top: 10px;
+}

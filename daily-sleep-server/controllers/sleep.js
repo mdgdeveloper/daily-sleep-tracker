@@ -24,6 +24,18 @@ sleepRouter.get("/completed", async (req, res) => {
   res.send(result);
 });
 
+
+sleepRouter.get("/last", async (req,res) => {
+  const result = await sleepLib.sortByDate();
+  res.json(result);
+})
+
+sleepRouter.get("/lastWeek", async (req, res) => {
+  const result = await sleepLib.sortByDateWeek();
+    res.json(result);
+})
+
+
 // Post Methods
 
 sleepRouter.post("/entry", async (req, res) => {

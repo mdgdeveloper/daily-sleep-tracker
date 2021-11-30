@@ -1,0 +1,44 @@
+.s-main{
+    padding: 40px;
+    border-radius: 20px;
+   }
+
+.s-logo{
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.s-logo-image{
+    height: 60px;
+}
+
+.s-menu{
+    margin-top: 90px;
+    color: #666666;
+}
+
+.s-menu-item{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all ease 0.2s;
+    margin-bottom: 5px;
+}
+
+.s-menu-item:hover{
+    color: #CCCCCC;
+    
+}
+
+
+.s-menu-icon{
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+    margin-right: 5px;
+}
+

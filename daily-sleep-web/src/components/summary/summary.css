@@ -1,0 +1,9 @@
+.summary-box-list{
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+.summary-title{
+    font-size: 20px;
+}

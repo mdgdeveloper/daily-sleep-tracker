@@ -1,9 +1,12 @@
+import Overview from '../overview/Overview';
+import Summary from '../summary/Summary';
 import './main.css';
 
 const Main = () => {
     return (
-        <div>
-            Main  
+        <div className="m-main">
+            <Summary />  
+            <Overview />
         </div>
     )
 }

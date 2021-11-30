@@ -29,9 +29,11 @@
 .app-left{
   flex: 1;
   background-color: var(--main-sidebar-bg-color);
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
 }
 
 .app-right{
-  flex: 4;
+  flex: 3;
 
 }
