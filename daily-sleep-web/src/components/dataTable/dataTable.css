@@ -1,3 +1,46 @@
 .dt-main{
     width: 100%;
 }
+
+.dt-title{
+    font-size: 20px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.dt-subtitle{
+    font-size: 13px;
+    font-weight: 400;
+    color: #00000099;
+    margin-top: 0;
+    padding-top: 7px;
+}
+
+.dt-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.dt-row.main{
+    background-color: var( --main-sidebar-bg-color);
+    border-radius: 5px;
+    padding: 5px;
+
+}
+
+.dt-col{
+    flex:1;
+    height: 100%;
+    text-align: center;
+    padding: 10px 0px;
+    font-size: 13px;
+    
+}
+
+.dt-col.main{
+    font-weight: 700;
+    font-size: 13px;
+    color: #999999CC;
+}
