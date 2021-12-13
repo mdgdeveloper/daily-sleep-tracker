@@ -1,0 +1,106 @@
+/* ========================================== 
+///////////////////////
+entryMain.css
+///////////////////////
+
+Main for Entry System 
+v0.1
+
+Developed by Sergio Madrigal 
+
+========================================== */
+
+.em-main{
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.em-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.em-list{
+    width: 88%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.em-item{
+    flex: 1;
+    margin-right: 10px;
+    height: 80px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.em-item:active{
+    opacity: 1;
+}
+
+.em-item-green{
+    background-color: #63d275;
+    opacity: 0.5;
+}
+.em-item-red{
+    background-color: #f99767;
+    opacity: 0.5;
+}
+.em-item-blue{
+    background-color: #5b9af0;
+    opacity: 0.5;
+}
+.em-item-icon{
+    color: white;
+}
+
+.em-item-text{
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.em-new{
+    background: url('/sleepPic.jpg') no-repeat;
+    background-size: 100%;
+    padding: 20px;
+    width: 80%;
+    height: 130px;
+    border-radius: 25px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.em-text{
+    display: flex;
+    flex-direction: column;
+}
+
+.em-new-text{
+    color: white;
+    font-size: 25px;
+    font-weight: 900;
+    cursor: pointer;
+    color: #FFFFFF;
+}
+
+.em-new-subtext{
+    color: white;
+    opacity: 1;
+}
+
+.em-icon{
+    color: white;
+}

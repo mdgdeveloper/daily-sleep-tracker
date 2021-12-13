@@ -1,21 +1,15 @@
 import './App.css';
-import Header from './components/header/Header';
-import Main from './components/main/Main';
-import Sidebar from './components/sidebar/Sidebar';
+import EntryFooter from './components/entry/entryFooter/EntryFooter';
+import EntryMain from './components/entry/entryMain/EntryMain';
+import Dashboard from './pages/Dashboard';
+import Entry from './pages/Entry';
+
 
 const App = () => {
 
   return (
-    <div className="app-main">
-      <div className="app-wrapper">
-        <div className="app-left">
-          <Sidebar />
-        </div>
-        <div className="app-right">
-          <Header />
-          <Main />
-        </div>
-      </div>
+    <div>
+      <Entry />
     </div>
   );
 };

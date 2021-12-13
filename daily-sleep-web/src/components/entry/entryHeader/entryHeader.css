@@ -1,0 +1,45 @@
+/* ========================================== 
+///////////////////////
+entryHeader.css
+///////////////////////
+
+Header for Entry System 
+v0.1
+
+Developed by Sergio Madrigal 
+
+========================================== */
+
+.eh-main {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.eh-logo {
+  
+}
+
+.eh-title {
+  padding: 20px;
+  font-weight: 900;
+  font-size: 20px;
+  color: gray;
+}
+
+.eh-subtitle {
+}
+
+.eh-greet{
+    padding: 20px;
+    font-size: 14px;
+    color: gray;
+    margin-right: 10px;
+    text-align: right;
+}
+
+.eh-date{
+    font-weight: 900;
+
+}

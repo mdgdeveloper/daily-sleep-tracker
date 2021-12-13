@@ -1,0 +1,39 @@
+/* Color Definitions */
+:root{
+    --main-bg-color: #f1eff0;
+    --main-sidebar-bg-color: #f6f4f5;
+    --main-green: #ebfdee;
+    --main-blue: #e8f0fb;
+    --main-red: #ffefe7;
+    --main-gray: #f6f6f6; 
+  }
+  
+  
+  .app-main{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: var(--main-bg-color);
+  }
+  
+  .app-wrapper{
+    width: 85%;
+    background-color: white;
+    border-radius: 20px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    display: flex;
+  }
+  
+  .app-left{
+    flex: 1;
+    background-color: var(--main-sidebar-bg-color);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+  
+  .app-right{
+    flex: 3;
+  
+  }

@@ -1,0 +1,28 @@
+/* ========================================== 
+///////////////////////
+entryFooter.css
+///////////////////////
+
+Footer for Entry System 
+v0.1
+
+Developed by Sergio Madrigal 
+
+========================================== */
+
+.ef-main{
+    width: 100%;
+}
+
+.ef-wrapper{
+    margin-right: 30px;
+    margin-left: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ef-icon{
+    color: gray;
+
+}
