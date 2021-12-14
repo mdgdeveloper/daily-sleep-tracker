@@ -19,6 +19,17 @@ export const getLast = async () => {
   }
 };
 
+export const getLastPending = async () => {
+  const url = `${import.meta.env.VITE_API_SERVER}/pending`;
+  try {
+    const last = await axios.get(url);
+    return last;
+  } catch (error) {
+    throw new Error(error.message);
+  }
+
+}
+
 export const getLastWeek = async () => {
     try {
         const dates = await getLastWeekArray();
@@ -123,6 +134,26 @@ export const getLastWeekRatings = async () => {
 }
 
 
+export const setNewEntry = async (date) => {
+  const url = `${import.meta.env.VITE_API_SERVER}/entry`;
+  try {
+    const newDate = new Date(date);
+    const json = { startDate: newDate, completed: false }; 
+    const result = await axios.post(url, json);
+    return result;
+    
+  } catch (error) {
+    throw new Error(error.message);
+  }
+}
 
 
-export default { getLast, getLastWeek, getLastWeekChart, getLastWeekEntries, getLastWeekRatings };
+
+export default { 
+  getLast,
+  getLastPending, 
+  getLastWeek, 
+  getLastWeekChart, 
+  getLastWeekEntries, 
+  getLastWeekRatings,
+  setNewEntry };

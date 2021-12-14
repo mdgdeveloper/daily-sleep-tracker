@@ -43,6 +43,7 @@ Developed by Sergio Madrigal
     cursor: pointer;
 }
 
+
 .em-item:active{
     opacity: 1;
 }
@@ -83,6 +84,12 @@ Developed by Sergio Madrigal
     cursor: pointer;
 }
 
+.em-new-disabled{
+    cursor: auto;
+    filter: grayscale(100%);
+}
+
+
 .em-text{
     display: flex;
     flex-direction: column;
@@ -103,4 +110,26 @@ Developed by Sergio Madrigal
 
 .em-icon{
     color: white;
+}
+
+
+.em-pending-list{
+    margin-top: 30px;
+    width: 80%;
+}
+
+.em-pending{
+    cursor: pointer;
+    padding: 20px 15px;
+    border-radius: 20px;
+    background-color: var(--main-red);
+}
+
+.em-event{
+    display: flex;
+    align-items: center;
+}
+
+.em-event-icon{
+    margin-right: 5px;
 }

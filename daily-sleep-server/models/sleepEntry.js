@@ -5,12 +5,12 @@ console.log("Connecting to:", url);
 
 
 const connectDB = async () => {
-try{
-    const result = await mongoose.connect(url);
-    console.log("Connected to MongoDB");
-}catch(error){
-    console.log("Error connecting to MongoDB: ", error.message);
-}
+    try {
+        const result = await mongoose.connect(url);
+        console.log("Connected to MongoDB");
+    } catch (error) {
+        console.log("Error connecting to MongoDB: ", error.message);
+    }
 }
 
 connectDB();
@@ -25,7 +25,7 @@ const sleepSchema = new mongoose.Schema({
 })
 
 sleepSchema.set('toJSON', {
-    transform: (document, returnedObject) =>{
+    transform: (document, returnedObject) => {
         returnedObject.id = returnedObject._id.toString();
         delete returnedObject._id;
         delete returnedObject.__v;

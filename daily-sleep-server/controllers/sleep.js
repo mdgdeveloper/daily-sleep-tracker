@@ -40,6 +40,7 @@ sleepRouter.get("/lastWeek", async (req, res) => {
 
 sleepRouter.post("/entry", async (req, res) => {
   const body = req.body;
+  console.log("body",body);
   if (body === "undefined") {
     return res.statusCode(400).json({ error: "content missing" });
   }
