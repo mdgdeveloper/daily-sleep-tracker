@@ -7,12 +7,15 @@ import EventIcon from '@mui/icons-material/Event';
 
 import { useState, useEffect } from 'react';
 import { getLastPending, setNewEntry } from '../../../services/sleep';
+import entryRating from "../entryRating/EntryRating";
+import EntryRating from "../entryRating/EntryRating";
 
 const EntryMain = () => {
   // New Entry Manager
   const [entryCSS, setEntryCSS] = useState('');
   const [entry, setEntry] = useState(false);
   const [last, setLast] = useState([]);
+  const [entryRating, setEntryRating] = useState(false);
   
   const handleEntry = async () =>{
     setEntryCSS('em-new-disabled')
@@ -40,19 +43,25 @@ const EntryMain = () => {
     
     
     const obtenerFecha = () => {
-      const meses = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"]
+      const meses = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+      const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
       if(last.data && last.data.length > 0){
         const fecha = new Date(last.data[0].startDate);
-        const dia = fecha.getDay();
+        const dia = days[fecha.getDay()-1]
+        const diaNum = fecha.getDate();
         const mes = meses[fecha.getMonth()]
-        return mes+" - "+dia;
+        return {mes, dia, diaNum}
       }else{
         return null;
       }
     }
 
     
-    const dia = obtenerFecha();
+    const fecha = obtenerFecha();
+
+    const handleEntryRating = () => {
+        setEntryRating(true);
+    }
 
 
   return (
@@ -87,11 +96,28 @@ const EntryMain = () => {
             <DarkModeIcon fontSize="large" />
           </div>
         </div>
-        {dia !== null && <div className="em-pending-list">
+        {fecha !== null && <div className="em-pending-list">
           <h2>Pending Sleep</h2>
-          <div className="em-pending">
-            {dia !== null && <div className="em-event"><EventIcon className="em-event-icon"/>{dia}</div>}
+          <div className="em-pending" onClick={handleEntryRating}>
+            {fecha !== null && 
+            <div className="em-event">
+                <div className="em-day">{fecha.diaNum}</div>
+                <div className="em-date-info">
+                    <div className="em-date-info-day">{fecha.dia}</div>
+                    <div className="em-date-info-month">{fecha.mes}</div>
+                </div>
+                <div className="em-button">
+                    <input type="button" value="Close" className="em-button-style" />
+                </div>
+                
+                
+            </div>
+                }
           </div>
+         { entryRating && <div className="em-entry-rating">
+                <EntryRating />
+         </div>}
+
         </div>}
       </div>
     </div>

@@ -114,8 +114,7 @@ Developed by Sergio Madrigal
 
 
 .em-pending-list{
-    margin-top: 30px;
-    width: 80%;
+    width: 85%;
 }
 
 .em-pending{
@@ -127,9 +126,49 @@ Developed by Sergio Madrigal
 
 .em-event{
     display: flex;
-    align-items: center;
+    align-items: top;
+    justify-content: space-between;
 }
 
 .em-event-icon{
     margin-right: 5px;
+}
+
+.em-day{
+    font-size: 3em;
+    font-weight: 800;
+    margin-right: 10px;
+}
+
+.em-date-info{
+    margin-top: 6px;
+}
+
+.em-date-info-day{
+    text-transform: lowercase;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+.em-date-info-month{
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+.em-button{
+    flex: 2;
+    margin-left: 20px;
+    margin-top: 6px;
+}
+
+.em-button-style{
+    padding: 10px;
+    width: 100%;
+    border: none;
+    background-color: #F21E32;
+    color: white;
+    border: 2px solid #CD1929;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 15px;
 }
