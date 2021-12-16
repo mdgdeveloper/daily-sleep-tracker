@@ -6,7 +6,7 @@ import HelpIcon from "@mui/icons-material/Help";
 import EventIcon from '@mui/icons-material/Event';
 
 import { useState, useEffect } from 'react';
-import { getLastPending, setNewEntry } from '../../../services/sleep';
+import { getLastPending, setNewEntry, updateEntry } from '../../../services/sleep';
 import entryRating from "../entryRating/EntryRating";
 import EntryRating from "../entryRating/EntryRating";
 
@@ -16,6 +16,9 @@ const EntryMain = () => {
   const [entry, setEntry] = useState(false);
   const [last, setLast] = useState([]);
   const [entryRating, setEntryRating] = useState(false);
+
+  const [rating, setRating] = useState(0);
+  const [rated, setRated] = useState(false);
   
   const handleEntry = async () =>{
     setEntryCSS('em-new-disabled')
@@ -29,6 +32,17 @@ const EntryMain = () => {
       }
       setLast(newLastEntry)
     }
+  }
+
+  const handleCloseEntry = async () => {
+    setEntryCSS('');
+    setEntry(false);
+    const entry = {...last.data[0]};
+    entry.sleepRating = rating;
+    entry.endDate = new Date(Date.now());
+    entry.completed = true;
+    const updatedEntry = await updateEntry(entry);
+    setLast([]);
   }
 
     useEffect(async () => {
@@ -115,8 +129,14 @@ const EntryMain = () => {
                 }
           </div>
          { entryRating && <div className="em-entry-rating">
-                <EntryRating />
+                <EntryRating setRated={setRated} setRating={setRating}/>
          </div>}
+
+         { rated && <div className="em-entry-close-rating">
+         <div className="em-button">
+                    <input onClick={handleCloseEntry} type="button" value="Send Rating" className="em-button-send-style" />
+                </div>
+           </div>}
 
         </div>}
       </div>

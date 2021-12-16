@@ -13,6 +13,7 @@ Developed by Sergio Madrigal
 .em-main{
     width: 100%;
     margin-bottom: 50px;
+    flex:2;
 }
 
 .em-wrapper{
@@ -171,4 +172,31 @@ Developed by Sergio Madrigal
     border-radius: 10px;
     font-weight: 600;
     font-size: 15px;
+    cursor: pointer;
+}
+
+.em-button-send-style{
+    padding: 10px;
+    width: 100%;
+    border: none;
+    background-color: #1e7af2;
+    color: white;
+    border: 2px solid #1949cd;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.em-rating-title{
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.em-rating-time{
+    padding: 0;
+    margin: 0;
+    font-size: 15px;
+    opacity: 0.5;
 }

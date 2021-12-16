@@ -1,0 +1,27 @@
+.em-rating-main{
+    margin-top: 10px;
+    width: 100%;
+}
+
+.star-list{
+    display: flex;
+    width: 100%;
+}
+
+.star{
+    flex:1;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.star-img{
+    width: 100%;
+}
+
+.starOff{
+    filter: grayscale(100%);
+}
+
+.starOn{
+    filter: grayscale(0%);
+}

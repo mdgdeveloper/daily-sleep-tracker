@@ -147,6 +147,18 @@ export const setNewEntry = async (date) => {
   }
 }
 
+export const updateEntry = async (entry) => {
+  const url = `${import.meta.env.VITE_API_SERVER}/update`;
+  try {
+    const newEntry = {...entry}
+    delete newEntry.id;
+    console.log(`${url}/${entry.id}`);
+    const result = await axios.put(`${url}/${entry.id}`, newEntry)
+    return result;
+  } catch (error) {
+    throw new Error(error.message);
+  }
+}
 
 
 export default { 
@@ -156,4 +168,5 @@ export default {
   getLastWeekChart, 
   getLastWeekEntries, 
   getLastWeekRatings,
-  setNewEntry };
+  setNewEntry,
+  updateEntry };

@@ -1,16 +1,19 @@
 import './App.css';
-import EntryFooter from './components/entry/entryFooter/EntryFooter';
-import EntryMain from './components/entry/entryMain/EntryMain';
 import Dashboard from './pages/Dashboard';
 import Entry from './pages/Entry';
+import { BrowserRouter, Router, Route, Routes } from 'react-router-dom';
 
 
 const App = () => {
 
   return (
-    <div>
-      <Entry />
-    </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Entry />} />
+          <Route path='/dashboard' element={<Dashboard />} />
+        </Routes>
+      </BrowserRouter>
+
   );
 };
 
