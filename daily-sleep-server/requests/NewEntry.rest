@@ -2,9 +2,9 @@ POST http://localhost:5000/api/sleep/entry
 content-type: application/json
 
 {
-    "startDate": "2021-11-23T23:00:18.389Z",
-    "endDate": "2021-11-24T07:04:18.389Z",
+    "startDate": "2021-11-25T23:35:18.389Z",
+    "endDate": "2021-11-26T07:12:18.389Z",
     "sleepRating": 2,
-    "dayRating": 4,
+    "dayRating": 3,
     "completed": true
 }

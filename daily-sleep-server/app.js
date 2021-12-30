@@ -6,13 +6,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.get('/', (req,res) => {
-    res.send('daily-sleeper-api-0.1');
-})
-
+app.get('/', (req, res) => {
+  res.send('daily-sleeper-api-0.1');
+});
 
 app.use('/api/sleep', sleepRouter);
-
-
 
 module.exports = app;

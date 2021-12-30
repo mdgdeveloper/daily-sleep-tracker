@@ -1,10 +1,6 @@
 //  Sleep Tracker Library 1.0
-require("dotenv").config();
-const Sleep = require("../models/sleepEntry");
-
-// Temporary data obtained statically
-const { entries, bedEntries } = require("../data/entries");
-const { format } = require("date-fns");
+require('dotenv').config();
+const Sleep = require('../models/sleepEntry');
 
 const getAllEntries = async () => {
   const result = await Sleep.find({});
@@ -62,22 +58,22 @@ const newEntry = async (body) => {
 };
 
 const sortByDate = async () => {
-  try{
-    const response = await Sleep.find({}).sort({endDate: -1});
+  try {
+    const response = await Sleep.find({}).sort({ endDate: -1 });
     return response[0];
-  }catch(error){
+  } catch (error) {
     throw new Error(error.message);
   }
-}
+};
 
 const sortByDateWeek = async () => {
-  try{
-    const response = await Sleep.find({}).sort({endDate: -1});
-    return response.slice(0,7);
-  }catch(error){
+  try {
+    const response = await Sleep.find({}).sort({ endDate: -1 });
+    return response.slice(0, 7);
+  } catch (error) {
     throw new Error(error.message);
   }
-}
+};
 
 module.exports = {
   getAllEntries,
@@ -88,5 +84,5 @@ module.exports = {
   updateEntry,
   newEntry,
   sortByDate,
-  sortByDateWeek
+  sortByDateWeek,
 };
